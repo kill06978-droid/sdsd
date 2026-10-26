@@ -16,9 +16,9 @@
       "type": "int",
       "name": "허용 스텝 수",
       "description": "클릭이 최소 이 스텝 수만큼 유지됩니다. 240TPS 기준 4스텝 = 약 4프레임입니다.",
-          "default": 30,
+             "default": 480,
       "min": 1,
-      "max": 240
+      "max": 1000
     }
   }
 }
