@@ -18,7 +18,7 @@ static bool assistEnabled() {
 }
 
 static int holdSteps() {
-    auto v = Mod::get()->getSettingValue<int64_t>("hold-steps");
+    auto v = Mod::get()->getSettingValue<int64_t>("hold-steps-v2");
     return v < 1 ? 1 : static_cast<int>(v);
 }
 
@@ -77,7 +77,7 @@ class $modify(AssistBaseLayer, GJBaseGameLayer) {
 
         // 디버그 표시 갱신
         if (auto dbg = typeinfo_cast<CCLabelBMFont*>(pl->getChildByID("input-assist-debug"_spr))) {
-            dbg->setString(fmt::format("H:{} P:{} D:{}", g_cntHandle, g_cntPush, g_cntDelayed).c_str());
+                       dbg->setString(fmt::format("H:{} P:{} D:{} S:{}", g_cntHandle, g_cntPush, g_cntDelayed, holdSteps()).c_str());
         }
     }
 };
