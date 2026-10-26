@@ -12,7 +12,7 @@
       "name": "입력 보조 사용",
       "default": true
     },
-    "hold-steps": {
+       "hold-steps-v2": {
       "type": "int",
       "name": "허용 스텝 수",
       "description": "클릭이 최소 이 스텝 수만큼 유지됩니다. 240TPS 기준 4스텝 = 약 4프레임입니다.",
