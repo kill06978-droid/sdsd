@@ -50,8 +50,9 @@ class $modify(AssistBaseLayer, GJBaseGameLayer) {
         GJBaseGameLayer::handleButton(false, button, isPlayer1);
     }
 
-    void processCommands(float dt) {
-        GJBaseGameLayer::processCommands(dt);
+    void processCommands(float dt, bool isHalfTick, bool isLastTick) {
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
+        if (isHalfTick) return;
 
         if (!PlayLayer::get() || !assistEnabled()) return;
 
