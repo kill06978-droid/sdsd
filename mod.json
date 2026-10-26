@@ -1,0 +1,24 @@
+{
+  "geode": "5.11.2",
+  "gd": { "win": "*" },
+  "id": "tester.input-assist",
+  "name": "Input Assist (Test)",
+  "version": "v1.0.0",
+  "developer": "tester",
+  "description": "입력 타이밍 허용 범위를 넓혀주는 테스트용 보조 모드. 켜져 있으면 화면에 표시되고 기록이 저장되지 않습니다.",
+  "settings": {
+    "enabled": {
+      "type": "bool",
+      "name": "입력 보조 사용",
+      "default": true
+    },
+    "hold-steps": {
+      "type": "int",
+      "name": "허용 스텝 수",
+      "description": "클릭이 최소 이 스텝 수만큼 유지됩니다. 240TPS 기준 4스텝 = 약 4프레임입니다.",
+      "default": 4,
+      "min": 1,
+      "max": 16
+    }
+  }
+}
